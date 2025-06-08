@@ -1,0 +1,258 @@
+/* css/header.css */
+.header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Lora', sans-serif;
+}
+
+.logo {
+  margin-top: 1.5rem;
+  height: 90px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav .contato {
+  margin-left: 2rem;
+  height: 2.7rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav ul a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  transition: color 0.3s ease;
+}
+
+.nav ul a:hover,
+.nav ul a.active {
+  color: #F2B705;
+}
+
+.contato {
+  background-color: #733C1D;
+  color: white;
+  padding: 0.7rem 1.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.contato:hover {
+  background-color: #402211;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/* Tablets (≤ 900px) */
+
+@media (max-width: 900px) {
+  .header {
+    position: relative;
+    padding: 0.7rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    z-index: 1100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #733C1D;
+  }
+
+  .nav {
+    position: absolute;
+    top: 3.5rem;
+    right: 1rem;
+    width: 240px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 2000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav li:last-child {
+    border-bottom: none;
+  }
+
+  .nav ul a {
+    font-weight: 500;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .nav ul a:hover,
+  .nav ul a.active {
+    color: #F2B705;
+  }
+
+  .contato {
+    background-color: #733C1D;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .nav .contato {
+    margin-left: 0;
+    padding: 0.6rem 1rem;
+    width: fit-content;
+  }
+
+  .header>.contato {
+    display: none !important;
+  }
+}
+
+/*  Mobile (≤ 600px) */
+@media (max-width: 600px) {
+  .header {
+    position: relative;
+    padding: 0.7rem 1rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    z-index: 2100;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #733C1D;
+  }
+
+  .nav {
+    position: fixed;
+    top: 3.5rem;
+    right: 1rem;
+    width: 240px;
+    max-width: 100vw;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    z-index: 2000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .nav li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.5rem;
+  }
+
+  .nav li:last-child {
+    border-bottom: none;
+  }
+
+  .nav ul a {
+    font-weight: 500;
+    color: inherit;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .nav ul a:hover,
+  .nav ul a.active {
+    color: #F2B705;
+  }
+
+  .contato {
+    background-color: #733C1D;
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .header>.contato {
+    display: none !important;
+  }
+}

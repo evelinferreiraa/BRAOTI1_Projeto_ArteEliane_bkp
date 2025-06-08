@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.banner-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 300px;
+}
+
+.catalogo-header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.corda-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.catalogo-titulo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-family: 'Lora', sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    z-index: 2;
+    margin: 0;
+    user-select: none;
+}
+
+.breadcrumb {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-family: 'Lato', serif;
+    font-size: 0.9rem;
+    color: #fff;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 2;
+}
+
+.breadcrumb-link {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-link:hover {
+    color: #F2B705;
+}
+
+.breadcrumb-separator {
+    color: #fff;
+    user-select: none;
+}
+
+.breadcrumb-current {
+    color: #fff;
+    font-weight: 700;
+}
+
+.catalogo-section {
+    width: 100vw;
+    min-height: 700px;
+    background-color: #F7EFE5;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto 3rem auto;
+    padding: 0 1rem;
+}
+.catalogo-card {
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(115, 60, 29, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.card-front {
+  opacity: 1;
+  z-index: 2;
+}
+
+.card-back {
+  opacity: 0;
+  z-index: 1;
+}
+
+.catalogo-card:hover .card-front {
+  opacity: 0;
+}
+
+.catalogo-card:hover .card-back {
+  opacity: 1;
+}
+
+.catalogo-card .card-inner.sem-verso .card-front {
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+.catalogo-card .card-inner.sem-verso {
+  cursor: default;
+}
+
+.card-front img,
+.card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.catalogo-card .info {
+  background-color: #bb4d0d;
+  color: #fff;
+  width: 100%;
+  padding: 1.2rem 1rem;
+  text-align: left;
+}
+
+.catalogo-card h2 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+}
+
+.preco {
+  font-family: 'Lato', sans-serif;
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.paginacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.paginacao button {
+    background-color: white;       
+    color: #733C1D;               
+    padding: 0.6rem 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;    
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 40px;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.paginacao button:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.paginacao button:hover:not(:disabled) {
+    background-color: #F2B705;    
+    color: white;
+}
+
+.paginacao button:active:not(:disabled) {
+    background-color: #F2B705;     
+    color: white;
+}
+
+.paginacao button:disabled,
+.paginacao button.ativo {
+    background-color: #F2B705; 
+    color: white;
+    cursor: default;
+}
+
+.bolsa-sonho {
+    text-align: center;
+    padding: 3rem 1rem;
+    font-family: 'Lora', serif;
+    color: #733C1D;
+    background-color: #fff;
+}
+
+.bolsa-sonho h2 {
+    font-size: 2rem;
+    color: #5c2d14;
+    margin-bottom: 0.5rem;
+}
+
+.bolsa-sonho a>img {
+    width: 20px;
+    left: 3px;
+    top: 5px;
+    position: relative;
+}
+
+.subtitulo {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #282C2F;
+    margin-bottom: 2rem;
+}
+
+.passos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.passo {
+    background-color: #F7EFE5;
+    color: #A86B30;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 260px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.destaque {
+    background-color: #A86B30;
+    color: white;
+}
+
+.passo h3 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.passo p {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.4rem;
+}
+
+.numero {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #A86B30;
+    display: flex;
+    justify-content: left;
+}
+
+.destaque .numero {
+    color: #F7EFE5;
+}
+
+.icone img {
+    height: 40px;
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+}
+
+.botao-zap {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: #733C1D;
+    color: #F7EFE5;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    transition: background-color 0.3s;
+}
+
+.botao-zap:hover {
+    background-color: #402211;
+}
+
+
+/* Tablets (601px – 900px) */
+@media (max-width: 900px) and (min-width: 601px) {
+  .catalogo-titulo {
+    font-size: 2.4rem;
+    top: 45%;
+  }
+
+  .breadcrumb {
+    font-size: 0.8rem;
+    top: 60%;
+  }
+
+  .catalogo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .catalogo-card {
+    max-width: 100%;
+  }
+
+  .card-inner {
+    height: 380px;
+  }
+
+  .bolsa-sonho h2 {
+    font-size: 1.8rem;
+  }
+
+  .subtitulo {
+    font-size: 0.95rem;
+  }
+
+  .passos-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }         
+
+  .passo {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .botao-zap {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  .paginacao {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+}
+
+/* Mobile (≥ 600px) */
+@media (max-width: 600px) {
+    .catalog-title {
+        font-size: 2rem;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .catalog-card {
+        padding: 1rem 0.5rem;
+    }
+
+    .catalog-card img {
+        max-width: 160px;
+    }
+
+    .catalog-nao-achou {
+        padding: 1.2rem 0.5rem 1rem 0.5rem;
+    }
+
+    .catalog-buttons {
+        gap: 0.7rem;
+    }
+
+    .catalog-btn {
+        font-size: 0.98rem;
+        padding: 0.6rem 1rem;
+    }
+}
